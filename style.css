@@ -30,3 +30,9 @@ button:hover {
     display: inline-block;
     transition: opacity 0.3s;
 }
+
+/* Keyframe for the falling effect */
+@keyframes fall {
+    0% { top: 0; opacity: 1; }
+    100% { top: 100vh; opacity: 0; }
+}

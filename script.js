@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
     prankButton.addEventListener('click', () => {
         // Reset the falling cursor's position and opacity each time
-        fallingCursor.style.top = '0';
-        fallingCursor.style.opacity = 1;
+        fallingCursor.style.top = '0'; // Reset to top of the screen
+        fallingCursor.style.opacity = 1; // Make the circle visible
 
         // Initially set the position to the center of the screen (horizontally)
         fallingCursor.style.left = `${window.innerWidth / 2 - 10}px`;

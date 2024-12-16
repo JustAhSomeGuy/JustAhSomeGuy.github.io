@@ -6,19 +6,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Mouse Gravity Effect when the button is clicked
     const prankButton = document.getElementById('prankButton');
+    
     prankButton.addEventListener('click', () => {
-        // Activate the gravity effect by making the cursor element visible
+        // Reset the falling cursor's position and opacity each time
+        fallingCursor.style.top = '0';
         fallingCursor.style.opacity = 1;
         
-        // Track the mouse and move the falling cursor with it
-        document.body.addEventListener('mousemove', (event) => {
-            let mouseX = event.clientX;
-            let mouseY = event.clientY;
-            
-            // Move the falling cursor with the mouse
-            fallingCursor.style.left = `${mouseX - 10}px`;
-            fallingCursor.style.top = `${mouseY - 10}px`;
-        });
+        // Initially set up the position in the center of the screen
+        fallingCursor.style.left = `${window.innerWidth / 2 - 10}px`;
 
         // After the button click, simulate the gravity effect and let the cursor fall
         setTimeout(() => {
@@ -29,7 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
             fallingCursor.style.top = '100vh';  // Move it to the bottom of the screen
             
             // Fade out the cursor as it falls
-            fallingCursor.style.opacity = 0;    
+            fallingCursor.style.opacity = 0;
+
         }, 100);  // Delay to sync with button click
     });
 });

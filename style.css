@@ -31,6 +31,18 @@ button:hover {
     transition: opacity 0.3s;
 }
 
+/* Create the cursor-like effect for gravity */
+#fallingCursor {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0;
+    transition: transform 0.1s ease-out;
+}
+
 /* Keyframe for the falling effect */
 @keyframes fall {
     0% { top: 0; opacity: 1; }

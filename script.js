@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Activate the gravity effect by making the cursor element visible
         fallingCursor.style.opacity = 1;
         
-        // Animate the falling cursor from the mouse's position to the bottom of the screen
+        // Track the mouse and move the falling cursor with it
         document.body.addEventListener('mousemove', (event) => {
             let mouseX = event.clientX;
             let mouseY = event.clientY;
@@ -26,20 +26,5 @@ document.addEventListener('DOMContentLoaded', () => {
             fallingCursor.style.top = '100vh';  // Move it to the bottom
             fallingCursor.style.opacity = 0;    // Make it fade out
         }, 100);  // Delay to sync with button click
-    });
-
-    // Button Moving Away Effect
-    prankButton.addEventListener('mouseenter', () => {
-        prankButton.style.position = 'absolute';
-        prankButton.style.transform = 'translate(' + (Math.random() * 200 - 100) + 'px, ' + (Math.random() * 200 - 100) + 'px)';
-    });
-
-    // Content Disappearing Effect
-    const content = document.querySelector('.content');
-    content.addEventListener('click', () => {
-        content.style.opacity = '0';
-        setTimeout(() => {
-            content.style.opacity = '1';
-        }, 1000);
     });
 });

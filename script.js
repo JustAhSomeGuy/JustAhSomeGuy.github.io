@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Button Moving Away Effect
     const prankButton = document.getElementById('prankButton');
     prankButton.addEventListener('mouseenter', () => {
+        prankButton.style.position = 'absolute';
         prankButton.style.transform = 'translate(' + (Math.random() * 200 - 100) + 'px, ' + (Math.random() * 200 - 100) + 'px)';
     });
 

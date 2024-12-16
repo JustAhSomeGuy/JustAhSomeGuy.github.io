@@ -22,9 +22,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // After the button click, simulate the gravity effect and let the cursor fall
         setTimeout(() => {
+            // Set up the transition for falling
             fallingCursor.style.transition = 'top 2s ease-in-out, opacity 2s ease';
-            fallingCursor.style.top = '100vh';  // Move it to the bottom
-            fallingCursor.style.opacity = 0;    // Make it fade out
+            
+            // Move the cursor element down to simulate gravity
+            fallingCursor.style.top = '100vh';  // Move it to the bottom of the screen
+            
+            // Fade out the cursor as it falls
+            fallingCursor.style.opacity = 0;    
         }, 100);  // Delay to sync with button click
     });
 });

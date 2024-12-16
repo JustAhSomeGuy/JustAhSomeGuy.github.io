@@ -12,20 +12,14 @@ document.addEventListener('DOMContentLoaded', () => {
         fallingCursor.style.top = '0';
         fallingCursor.style.opacity = 1;
         
-        // Initially set up the position in the center of the screen
+        // Initially set the position to the center of the screen (horizontally)
         fallingCursor.style.left = `${window.innerWidth / 2 - 10}px`;
 
         // After the button click, simulate the gravity effect and let the cursor fall
         setTimeout(() => {
-            // Set up the transition for falling
-            fallingCursor.style.transition = 'top 2s ease-in-out, opacity 2s ease';
-            
-            // Move the cursor element down to simulate gravity
+            // Start the transition to simulate the gravity fall
             fallingCursor.style.top = '100vh';  // Move it to the bottom of the screen
-            
-            // Fade out the cursor as it falls
-            fallingCursor.style.opacity = 0;
-
+            fallingCursor.style.opacity = 0;    // Fade out as it falls
         }, 100);  // Delay to sync with button click
     });
 });

@@ -26,7 +26,7 @@ button:hover {
     transform: scale(1.1);
 }
 
-/* Styling for the simulated cursor (gravity effect) */
+/* Styling for the falling cursor (gravity effect) */
 #fallingCursor {
     position: absolute;
     width: 20px;
